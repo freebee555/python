@@ -32,7 +32,8 @@ while i>=0:
 print(a+' + '+b+' = '+str(c_add))
 
 ################Multiply#################
-c_mp=[0 for i in range(m*2),0 for j in range(m*2)]
+c_mp=[0 for i in range(m*2)]
+print(c_mp)
 
 
 
