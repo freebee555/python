@@ -2,13 +2,22 @@ def output(*numbers):
     nn=''
     for sn in numbers:
         nn=nn+str(sn)
-    return nn[nn[0]=='0':len(nn)]
+    i=len(nn)
+    while i>=0:
+        if nn[0]=='0':
+            nn=nn[1:len(nn)]
+            i=i-1
+        else:
+            break
+    return nn
 
-a='13'
-b='138456877475847'
+a='23456563456541334'
+b='98847'
 
 la=len(a)
 lb=len(b)
+oa=a
+ob=b
 
 if la>lb:
     b='0'*(la-lb)+b
@@ -35,7 +44,7 @@ while i>=0:
     c_add[i-1]=c_add[i-1]+n2
     i=i-1
 
-print(a+' + '+b+' = '+output(*c_add))
+print(oa+' + '+ob+' = '+output(*c_add))
 
 ################Multiply#################
 c_mp=[0 for i in range(m*2)]
@@ -58,7 +67,7 @@ while i>=0:
     i=i-1
 
 op=output(*c_mp)
-print(a+' * '+b+' = '+op[op[0]=='0':len(op)])
+print(oa+' * '+ob+' = '+op[op[0]=='0':len(op)])
 
 
 
